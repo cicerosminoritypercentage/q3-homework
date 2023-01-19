@@ -1,0 +1,50 @@
+public class Arabic {
+    static void myMethod(String fname) {
+        System.out.println(fname + "Khan");
+    }
+    public static void main(String[] args){
+        myMethod("Salman");
+        myMethod("Shahrukh");
+        myMethod("Aamir");
+    }
+}
+
+public class arabic2 {
+    static void myMethod(String fname, int age) {
+        System.out.println(fname + "is" + age);
+    }
+    public static void main(String[] args) {
+        myMethod("Sneha", 25);
+        myMethod("Sanjana", 21);
+        myMethod("Anju", 20);
+    }
+}
+
+public class MyClass {
+    int method() {
+        return 10;
+    }
+    public static void method1(String a, int i) {
+        return 20.55;
+    }
+    public static int main (int a, int b){
+    return a+b;
+    }
+    public static void main(String[] args){
+        System.out.println(main(10,20));
+    }
+}
+
+public class BasicEmployee {
+    float basic;
+    public float updateSalary(Number val){
+        return basic+val.floatValue();
+    }
+}
+public class BasicPlusCommissionEmployee extends 
+BasicEmployee{
+    @Override 
+    public float updateSalary(Number commission){
+        return basic+basic+basic*commission.floatValue();
+    }
+}
