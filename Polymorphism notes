@@ -1,0 +1,57 @@
+/**
+ * Polmorphism Notes
+ *
+ * @Brielle Quintana
+ * Jan 20, 2023
+ * Definition: (in java) Many forms
+ * Why: preserve and reuse code
+ */
+public class Polymorphism {
+    public void mammal(){
+        System.out.println("The mammals have mammary glands");
+    }
+}
+class Dog extends Polymorphism {
+    public void mammal(){
+        System.out.println("Is a mammal");
+    }
+}
+class Snail extends Polymorphism {
+    public void mammal() {
+        System.out.println("Not a mammal");
+    }
+}
+
+class MainSpecies {
+    public static void main(String[] args) {
+        Polymorphism myPolymorphism = new Polymorphism();
+        Polymorphism myDog = new Dog();
+        Polymorphism mySnail = new Snail();
+        myPolymorphism.mammal();
+        myDog.mammal();
+        mySnail.mammal();
+    }
+}
+
+
+class Skinwalker extends Polymorphism {
+    public void mammal(){
+        System.out.println("Is a mammal");
+    }
+}
+class Reptilian extends Polymorphism {
+    public void mammal() {
+        System.out.println("Not a mammal");
+    }
+}
+
+class MainSpecies2 {
+    public static void main(String[] args) {
+        Polymorphism myPolymorphism = new Polymorphism();
+        Polymorphism mySkinwalker = new Skinwalker();
+        Polymorphism myReptilian = new Reptilian();
+        myPolymorphism.mammal();
+        mySkinwalker.mammal();
+        myReptilian.mammal();
+    }
+}
